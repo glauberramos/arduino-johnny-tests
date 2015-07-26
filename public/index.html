@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->  
+<head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Arduino test</title>
+</head>  
+<body>
+  <link rel="stylesheet" type="text/css" href="colorpicker.css">
+  <script src="socket.io.js"></script>
+  <script src="angular.min.js"></script>  
+  <script src="socket.min.js"></script>
+  <script src="bootstrap-colorpicker-module.js"></script>
+  <script src="script.js"></script>
+ 
+  <h1>Led controller</h1>
+  <div ng-controller="ArduController">
+    <button ng-click="ledOn()">On</button>
+    <button ng-click="ledOff()">Off</button>
+    <input colorpicker ng-model="color" ng-change="changeColor()" type="text">
+  </div>
+</body>
